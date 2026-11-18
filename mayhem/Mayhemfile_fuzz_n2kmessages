@@ -1,0 +1,8 @@
+project: savantenvs/NMEA2000
+target: fuzz_n2kmessages
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_n2kmessages/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_n2kmessages
+    libfuzzer: true

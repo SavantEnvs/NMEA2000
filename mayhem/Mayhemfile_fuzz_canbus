@@ -1,0 +1,8 @@
+project: savantenvs/NMEA2000
+target: fuzz_canbus
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_canbus/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_canbus
+    libfuzzer: true

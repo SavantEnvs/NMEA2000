@@ -1,0 +1,8 @@
+project: savantenvs/NMEA2000
+target: fuzz_actisense
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_actisense/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_actisense
+    libfuzzer: true
